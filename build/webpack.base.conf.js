@@ -3,6 +3,8 @@ var config = require('../config')
 var utils = require('./utils')
 var projectRoot = path.resolve(__dirname, '../')
 
+var LessPluginAutoPrefix = require('less-plugin-autoprefix')
+
 var env = process.env.NODE_ENV
 // check env & config/index.js to decide weither to enable CSS Sourcemaps for the
 // various preprocessor loaders added to vue-loader at the end of this file
@@ -72,6 +74,11 @@ module.exports = {
       require('autoprefixer')({
         browsers: ['last 2 versions']
       })
+    ]
+  },
+  lessLoader: {
+    lessPlugins: [
+      new LessPluginAutoPrefix({browsers: ["last 2 versions"]})
     ]
   }
 }
