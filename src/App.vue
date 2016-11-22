@@ -1,5 +1,9 @@
 <template>
-  <div class="title">HEllo Vue2.0</div>
+  <div id="app">
+  	<div class="title">HEllo Vue2.0</div>
+  	<router-link to="/home">home</router-link>
+  	<router-view></router-view>
+  </div>
 </template>
 
 <script>
