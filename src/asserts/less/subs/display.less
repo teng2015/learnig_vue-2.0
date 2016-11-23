@@ -1,0 +1,20 @@
+// displays (显示相关)
+.display(@display: block;) {
+	display: @display;
+}
+
+.flex(@direc: row) {
+	display: flex;
+	flex-direction: @direc;
+}
+
+.flex-center() {
+	&:extend(.flex);
+	justify-content: center;
+	align-items: center;
+}
+.flex-between() {
+	&:extend(.flex);
+	justify-content: space-between;
+	align-items: center;
+}
